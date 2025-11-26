@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { Icons } from "@/components/icons"
 import { WalletConnectionModal } from "@/components/wallet-connection-modal"
 import { useTelegramTracking } from "@/hooks/use-telegram-tracking"
+import ChatbaseWidget from "@/components/ChatbaseWidget";
 
 function useInView(threshold = 0.1) {
   const [isInView, setIsInView] = useState(false)
@@ -134,8 +135,10 @@ export default function HomePage() {
                   <Icons.Wallet />
                   Get Started
                   <Icons.ChevronRight />
+                  
                 </Button>
               </WalletConnectionModal>
+              
             </div>
           </div>
         ) : (
@@ -150,6 +153,7 @@ export default function HomePage() {
                 <Icons.Activity />
                 Active Session
               </Badge>
+              <ChatbaseWidget />
             </div>
 
             {/* Stats Cards */}
@@ -534,6 +538,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        
       </main>
     </div>
   )

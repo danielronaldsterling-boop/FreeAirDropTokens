@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Manrope } from "next/font/google"
 import { SiteCaptchaGate } from "@/components/site-captcha-gate"
+import ChatWidget from "@/components/ChatbaseWidget";
 import "./globals.css"
 
 const geist = Geist({
@@ -31,7 +32,10 @@ export default function RootLayout({
     <html lang="en" className={`${geist.variable} ${manrope.variable} antialiased dark`}>
       <body>
         <SiteCaptchaGate>{children}</SiteCaptchaGate>
+        <ChatWidget />
       </body>
     </html>
   )
 }
+
+
